@@ -1,7 +1,9 @@
 // import axios from "axios";
 
 const users = [
-  { id: 1, name: 'Dima', vacancies: 12 },
+  { id: 1, name: 'Dima', vacancies: 12, friend: 3 },
+  { id: 2, name: 'Sveta', vacancies: 12, friend: null },
+  { id: 3, name: 'Valera', vacancies: 12, friend: 2 },
 ]
 
 export const findUserInDB = async (id) => {
