@@ -1,14 +1,22 @@
 const resolvedPromise = Promise.resolve([{}])
 resolvedPromise
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error))
+  .then((data) => {
+    // console.log(data)
+  })
+  .catch((error) => {
+    // console.log(error)
+  })
 
 
 const rejectedPromise = Promise.reject({ message: 'Some error' });
 
 rejectedPromise
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error))
+  .then((data) => {
+    // console.log(data)
+  })
+  .catch((error) => {
+    // console.log(error)
+  })
 
 
 
@@ -28,7 +36,9 @@ const usersAPI = {
 
 const promise = usersAPI.getAllUsers()
 
-promise.then((users) => console.log(users))
+promise.then((users) => {
+  // console.log(users)
+})
 
 usersAPI.login('123', '44142')
   .then(data => {
