@@ -36,9 +36,9 @@ const axios = {
 export const findUserInDB = (id) => {
   return new Promise((resolve, reject) => {
     const users = [
-      { id: 1, name: 'Dima', vacancies: 12, friend: 3 },
-      { id: 2, name: 'Sveta', vacancies: 12, friend: null },
-      { id: 3, name: 'Valera', vacancies: 12, friend: 2 },
+      { id: 1, name: 'Dima', friend: 4 },
+      { id: 2, name: 'Sveta', friend: null },
+      { id: 3, name: 'Valera', friend: 2 },
     ]
 
     const user = users.find(u => u.id === id);
