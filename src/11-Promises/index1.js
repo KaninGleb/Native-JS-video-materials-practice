@@ -4,7 +4,7 @@ const users = [
   { id: 1, name: 'Dima', vacancies: 12 },
 ]
 
-const findUserInDB = async (id) => {
+export const findUserInDB = async (id) => {
   return users.find(user => user.id === id);
 }
 
