@@ -16,8 +16,8 @@ function getNumber() {
   })
 }
 
-getNumber().then(n => console.log(n));
-getNumber().then(n => console.log(n));
+// getNumber().then(n => console.log(n));
+// getNumber().then(n => console.log(n));
 
 
 const repo = {
@@ -75,16 +75,16 @@ const repo = {
 // }
 
 const result = repo.save({name: 'IT'})
-console.log('SAVED')
+// console.log('SAVED')
 const data = repo.read()
-console.log(data)
+// console.log(data)
 
 const run = async () => {
   await repo.saveAsync({name: 'IT'})
-  console.log('SAVED')
+  // console.log('SAVED')
 
   const data = await repo.readAsync()
-  console.log(data)
+  // console.log(data)
 }
 
 run()
