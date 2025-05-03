@@ -1,4 +1,4 @@
-// 1 -----------------------------------------------
+// 1 ------------------------------------------------
 class DeleteUserAction {
   constructor (userId) {
     this.type = 'DELETE-USER'
@@ -15,7 +15,7 @@ const action2 = new DeleteUserAction(333)
 // console.log(action2)
 
 
-// 2 -----------------------------------------------
+// 2 ------------------------------------------------
 class User1 {
   constructor(name, site, dateOfBirth) {
   this.name = name
@@ -35,7 +35,7 @@ const user2 = new User1('Artem', 'it-incubator', new Date(1900, 10, 12))
 // user2.hello()
 
 
-// 3 - Class inheritance ---------------------------
+// 3 - Class - constructor values -------------------
 class User {
   constructor(name, site, dateOfBirth) {
     this.name = name
@@ -45,7 +45,6 @@ class User {
   }
 
   hello () {
-    debugger
     this.counter++
     console.log(`I am ${this.name} from ${this.site}`)
   }
@@ -54,5 +53,41 @@ class User {
 const u1 = new User('Dimych', 'it-incubator', new Date(1900, 1, 2))
 const u2 = new User('Artem', 'it-incubator', new Date(1900, 10, 12))
 
-u1.hello()
-u2.hello()
+// u1.hello()
+// u2.hello()
+
+
+// 4 - Getter, Setter -------------------------------
+class User2 {
+  #name = ''
+
+  constructor(name, site, dateOfBirth) {
+    this.name = name
+    this.site = site
+    this.dateOfBirth = dateOfBirth
+    this.counter = 0
+  }
+
+  get name () {
+    return this.#name
+  }
+
+  set name (newName) {
+    return this.#name = newName
+  }
+
+  hello () {
+    this.counter++
+    console.log(`I am ${this.#name} from ${this.site}`)
+  }
+}
+
+const u2_1 = new User2('Dimych', 'it-incubator', new Date(1900, 1, 2))
+const u2_2 = new User2('Artem', 'it-incubator', new Date(1900, 10, 12))
+
+u2_1.name = 'Dimych 123'
+
+// console.log(u2_1)
+//
+// u1.hello()
+// u2.hello()
