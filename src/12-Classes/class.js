@@ -91,3 +91,61 @@ u2_1.name = 'Dimych 123'
 //
 // u1.hello()
 // u2.hello()
+
+
+// 5 - Class inheritance ---------------------------
+class User3 {
+  #name = ''
+
+  constructor(name, site, dob) {
+    this.name = name
+    this.site = site
+    this.dateOfBirth = dob
+    this.counter = 0
+  }
+
+  get name () {
+    return this.#name
+  }
+
+  set name (newName) {
+    return this.#name = newName
+  }
+
+  hello () {
+    this.counter++
+    console.log(`I am ${this.#name} from ${this.site}`)
+  }
+}
+
+const u3_1 = new User2('Dimych!!!', 'it-incubator.by', new Date(1988, 1, 2))
+const u3_2 = new User2('Artem!!!', 'it-incubator.by', new Date(1988, 10, 12))
+
+u3_1.name = 'Igor!!!'
+
+let users = [u3_1, u3_2]
+
+// users.forEach(u => u.hello())
+
+
+class Coder extends User3 {
+  constructor(name, site, dob, tech) {
+    super(name, site, dob)
+    this.tech = tech
+  }
+
+  code() {
+    console.log(`I am ${this.name}, here is my ${this.tech} code: function sum(a, b) => a + b;`)
+  }
+
+  hello() {
+    super.hello()
+    console.log('Go away')
+  }
+}
+
+const coder1 = new Coder('Dimych Coder!!!', 'it-incubator.by', new Date(1988, 1, 2), 'c#')
+// coder1.code()
+// coder1.hello()
+
+
