@@ -167,4 +167,35 @@ const hacker1 = new Hacker('Dimych Coder!!!', 'it-incubator.by', new Date(1988, 
 
 let users = [u3_1, u3_2, coder1, hacker1]
 
-users.forEach(u => u.hello())
+// users.forEach(u => u.hello())
+
+
+// 6 - React - Class component ----------------------
+import React from "react";
+
+
+class ProfilePage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return 'SUBSCRIBE'
+  }
+}
+
+
+// @@@ React
+
+// <ProfilePage age={1}/>
+// const comp1 = new ProfilePage({ age: 1 })
+// const jsx = comp1.render()
+// jsx => html
+// comp1.componentDidMount()
+
+
+// if (comp1.shouldComponentUpdate()) {
+//   const newJsx = comp1.render()
+//   jsx => html
+//   comp1.componentDidUpdate()
+// }
