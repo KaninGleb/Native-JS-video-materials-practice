@@ -123,7 +123,7 @@ const u3_2 = new User2('Artem!!!', 'it-incubator.by', new Date(1988, 10, 12))
 
 u3_1.name = 'Igor!!!'
 
-let users = [u3_1, u3_2]
+// let users = [u3_1, u3_2]
 
 // users.forEach(u => u.hello())
 
@@ -144,8 +144,27 @@ class Coder extends User3 {
   }
 }
 
+class Hacker extends Coder {
+  constructor(a, b, c, d) {
+    super();
+    this.tech = 'XXX'
+    this.name = 'XXXXX'
+  }
+
+  code () {
+    console.log(`I will hack everything`)
+  }
+}
+
 const coder1 = new Coder('Dimych Coder!!!', 'it-incubator.by', new Date(1988, 1, 2), 'c#')
 // coder1.code()
 // coder1.hello()
 
 
+const hacker1 = new Hacker('Dimych Coder!!!', 'it-incubator.by', new Date(1988, 1, 2), 'c#')
+// hacker1.hello()
+// hacker1.code()
+
+let users = [u3_1, u3_2, coder1, hacker1]
+
+users.forEach(u => u.hello())
